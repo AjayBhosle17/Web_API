@@ -17,7 +17,7 @@ namespace _1_Web_API_Intro
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new {controller="Home",action= "GetNames", id = RouteParameter.Optional }
             );
         }
     }
