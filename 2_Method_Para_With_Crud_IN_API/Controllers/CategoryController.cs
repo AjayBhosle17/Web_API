@@ -78,7 +78,9 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
                     {
                         dbCategory.Name = category.Name;
                         dbCategory.Rating = category.Rating;
-                        return Ok(dbCategory);
+
+                        _dbContext.SaveChanges();
+                        return Ok();
                     }
                     else
                     {
