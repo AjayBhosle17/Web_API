@@ -12,6 +12,7 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
+        [HttpGet]
         public ActionResult Index()
         {
 
@@ -28,7 +29,7 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
 
             client.BaseAddress = new Uri("https://localhost:44371/api/");
 
-            HttpResponseMessage response=client.GetAsync("Category").Result;
+            HttpResponseMessage response=client.GetAsync("category").Result;
 
 
             if (response.IsSuccessStatusCode)
@@ -55,5 +56,30 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
 
             return View(categories);
         }
+
+        [HttpGet]
+        public Category GetById(int? Id)
+        {
+         
+            Category category = null;
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:44371/api/");
+
+            HttpResponseMessage response = client.GetAsync($"category/{Id.Value}").Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonresult = response.Content.ReadAsStringAsync().Result;
+                category= JsonConvert.DeserializeObject<Category>(jsonresult);
+
+            }
+
+            client.Dispose();
+            return category;
+        }
+
+        [HttpGet]
+
+
     }
 }
