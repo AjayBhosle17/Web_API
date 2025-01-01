@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+<h2>Category List</h2>
+
+<table id="tblCategory">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    $(function () {
+        // AJAX call to load categories
+        $.ajax({
+            url: 'https://localhost:44371/api/category', // Correct endpoint
+            method: 'GET', // Use method instead of type
+            success: function (response) {
+                // Populate table with data
+                var tbody = $('#tblCategory tbody');
+                tbody.empty(); // Clear existing rows, if any
+                $.each(response, function (index, category) {
+                    tbody.append(
+                        `<tr>
+                            <td>${category.Id}</td>
+                            <td>${category.Name}</td>
+                            <td>${category.Rating}</td>
+                        </tr>`
+                    );
+                });
+                alert('API call success');
+            },
+            error: function (reason) {
+                alert('API call failed: ' + reason.responseText);
+            }
+        });
+    });
+</script>
