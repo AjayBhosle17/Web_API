@@ -17,6 +17,7 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
         // GET: CategoryJs/Details/5
         public ActionResult Details(int id)
         {
+            ViewBag.getId=id;
             return View();
         }
 
@@ -26,7 +27,7 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
             return View();
         }
 
-        // POST: CategoryJs/Create
+      /*  // POST: CategoryJs/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -40,15 +41,16 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
             {
                 return View();
             }
-        }
+        }*/
 
         // GET: CategoryJs/Edit/5
         public ActionResult Edit(int id)
         {
+            ViewBag.getData=id;
             return View();
         }
 
-        // POST: CategoryJs/Edit/5
+      /*  // POST: CategoryJs/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -62,11 +64,12 @@ namespace _3_Consume_API_Fetch_API__Client.Controllers
             {
                 return View();
             }
-        }
+        }*/
 
         // GET: CategoryJs/Delete/5
         public ActionResult Delete(int id)
         {
+            ViewBag.GetDelete = id;
             return View();
         }
 

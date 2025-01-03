@@ -1,0 +1,55 @@
+﻿
+<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+<h2>Category Details</h2>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>
+            <label id="lblId"></label>
+        </td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>
+            <label id="lblName"></label>
+        </td>
+    </tr>
+    <tr>
+        <td>Rating</td>
+        <td>
+            <label id="lblRating"></label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>@Html.ActionLink("Back to List", "Index")</td>
+    </tr>
+</table>
+
+
+<script>
+
+    $(function () {
+
+        $.ajax({
+
+            url: `https://localhost:44371/api/category/${@ViewBag.getId}`,
+            type: 'GET',
+            success: function (response) {
+
+                $('#lblId').text(response.Id);
+                $('#lblName').text(response.Name);
+
+                $('#lblRating').text(response.Rating);
+
+            },
+            error: function (error) {
+
+                alert("api Call Failed");
+            }
+        });
+
+    })
+
+</script>

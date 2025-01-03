@@ -155,6 +155,10 @@
     <Content Include="Views\CategoryJs\Index.cshtml" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Views\CategoryJs\Create.cshtml" />
+    <Content Include="Views\CategoryJs\Details.cshtml" />
+    <Content Include="Views\CategoryJs\Edit.cshtml" />
+    <Content Include="Views\CategoryJs\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

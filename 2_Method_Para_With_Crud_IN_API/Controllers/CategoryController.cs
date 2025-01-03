@@ -42,7 +42,7 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
 
             }
                 
-            return BadRequest("CAtegory Id Should be Grater Than 0");
+            return BadRequest("Category Id Should be Grater Than 0");
             
 
         }
