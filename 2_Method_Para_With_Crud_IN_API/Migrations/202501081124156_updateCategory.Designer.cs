@@ -7,13 +7,13 @@ namespace _2_Method_Para_With_Crud_IN_API.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class UpdateCategory : IMigrationMetadata
+    public sealed partial class updateCategory : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateCategory));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateCategory));
         
         string IMigrationMetadata.Id
         {
-            get { return "202501031005347_UpdateCategory"; }
+            get { return "202501081124156_updateCategory"; }
         }
         
         string IMigrationMetadata.Source

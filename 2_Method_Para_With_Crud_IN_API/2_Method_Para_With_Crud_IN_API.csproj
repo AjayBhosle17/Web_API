@@ -163,16 +163,13 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CategoryV2Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202501030932077_AddedCategory.cs" />
-    <Compile Include="Migrations\202501030932077_AddedCategory.Designer.cs">
-      <DependentUpon>202501030932077_AddedCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202501031005347_UpdateCategory.cs" />
-    <Compile Include="Migrations\202501031005347_UpdateCategory.Designer.cs">
-      <DependentUpon>202501031005347_UpdateCategory.cs</DependentUpon>
+    <Compile Include="Migrations\202501081124156_updateCategory.cs" />
+    <Compile Include="Migrations\202501081124156_updateCategory.Designer.cs">
+      <DependentUpon>202501081124156_updateCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\Category.cs" />
@@ -192,11 +189,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202501030932077_AddedCategory.resx">
-      <DependentUpon>202501030932077_AddedCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202501031005347_UpdateCategory.resx">
-      <DependentUpon>202501031005347_UpdateCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202501081124156_updateCategory.resx">
+      <DependentUpon>202501081124156_updateCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

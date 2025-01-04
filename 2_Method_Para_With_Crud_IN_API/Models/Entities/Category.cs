@@ -22,5 +22,13 @@ namespace _2_Method_Para_With_Crud_IN_API.Models.Entities
         [Required]
         [Range(1,5)]
         public int Rating { get; set; }
+
+
+        //use for Managing API using Post all opaertion in CategoryV2Controller 
+
+       /* public bool IsCreate { get; set; }
+
+        public bool IsUpdate { get; set; }
+        public bool IsDelete { get; set; }*/
     }
 }

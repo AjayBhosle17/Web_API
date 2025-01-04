@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddedCategory : DbMigration
+    public partial class updateCategory : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false, maxLength: 40, unicode: false),
                         Rating = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);

@@ -11,20 +11,21 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
 {
     public class CategoryController : ApiController
     {
-        ProductDBContext _dbContext= new ProductDBContext();
+        ProductDBContext _dbContext = new ProductDBContext();
 
         [HttpGet]
 
         public IHttpActionResult GetAll()
         {
-           var category = _dbContext.Categories.ToList();
+            var category = _dbContext.Categories.ToList();
 
             return Ok(category);
         }
 
 
         [HttpGet]
-        public IHttpActionResult GetById([FromUri]int? id) {
+        public IHttpActionResult GetById([FromUri] int? id)
+        {
 
             if (id > 0)
             {
@@ -41,14 +42,15 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
                 }
 
             }
-                
+
             return BadRequest("Category Id Should be Grater Than 0");
-            
+
 
         }
 
         [HttpPost]
-        public IHttpActionResult Create([FromBody] Category category) {
+        public IHttpActionResult Create([FromBody] Category category)
+        {
 
             if (category != null)
             {
@@ -59,18 +61,19 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
 
             }
 
-                return BadRequest();   //400
-            
+            return BadRequest();   //400
+
         }
 
 
         [HttpPut]   // update
 
-        public IHttpActionResult Update([FromUri]int? id , [FromBody]Category category)
+        public IHttpActionResult Update([FromUri] int? id, [FromBody] Category category)
         {
             if (id > 0)
             {
-                if (id == category.Id) {
+                if (id == category.Id)
+                {
 
                     Category dbCategory = _dbContext.Categories.Find(id);
 
@@ -86,26 +89,29 @@ namespace _2_Method_Para_With_Crud_IN_API.Controllers
                     {
                         return NotFound();
                     }
-                   
+
                 }
                 return BadRequest();
-                
+
             }
             return BadRequest("CAtegory Id Should be Grater Than 0");
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete([FromUri] int? id) {
+        public IHttpActionResult Delete([FromUri] int? id)
+        {
 
-            if (id > 0) {
+            if (id > 0)
+            {
 
                 Category category = _dbContext.Categories.Find(id);
 
-                if (category != null) { 
-                
+                if (category != null)
+                {
+
                     _dbContext.Categories.Remove(category);
                     _dbContext.SaveChanges();
-                    return Ok();    
+                    return Ok();
                 }
                 return NotFound();
             }
