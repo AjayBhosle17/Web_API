@@ -19,6 +19,10 @@ namespace _2_Method_Para_With_Crud_IN_API
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            //for every request
+
+            config.MessageHandlers.Add(new TokenValidationHandler());
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

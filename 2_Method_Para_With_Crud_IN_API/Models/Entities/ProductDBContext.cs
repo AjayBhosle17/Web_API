@@ -10,6 +10,7 @@ namespace _2_Method_Para_With_Crud_IN_API.Models
     public class ProductDBContext:DbContext
     {
         public DbSet<Category> Categories { get; set; } 
+        public DbSet<Users> Users { get; set; }
 
     }
 }
