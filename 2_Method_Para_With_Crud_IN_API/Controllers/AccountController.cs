@@ -11,6 +11,7 @@ using System.Web.Http;
 
 namespace _2_Method_Para_With_Crud_IN_API.Controllers
 {
+    [AllowAnonymous]
     public class AccountController : ApiController
     {
         ProductDBContext _dBContext;

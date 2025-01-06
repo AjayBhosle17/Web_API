@@ -23,6 +23,8 @@ namespace _2_Method_Para_With_Crud_IN_API
 
             config.MessageHandlers.Add(new TokenValidationHandler());
 
+            config.Filters.Add(new AuthorizeAttribute());  // declare authorize  global
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
