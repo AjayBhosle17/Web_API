@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace _3_Consume_API_Fetch_API__Client.Controllers
 {
+    [AllowAnonymous]
     public class CategoryJsController : Controller
     {
         // GET: CategoryJs

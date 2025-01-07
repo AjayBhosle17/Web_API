@@ -10,6 +10,7 @@ using System.Web.Http;
 namespace _2_Method_Para_With_Crud_IN_API.Controllers
 {
     // [Authorize] //declare globally
+    [AllowAnonymous]
     public class CategoryController : ApiController
     {
         ProductDBContext _dbContext = new ProductDBContext();
