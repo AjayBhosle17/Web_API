@@ -31,8 +31,19 @@ namespace _4_FileManagementProject.Controllers
                 return View(files);
             }
 
-            // GET: File/Upload
-            public ActionResult Upload()
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            if (Session["UserRole"] == null)
+            {
+                // Temporarily assign a default role (e.g., Admin or User) for testing
+                Session["UserRole"] = "Admin";
+                Session["UserID"] = 1; // Set a test UserID
+            }
+            base.OnActionExecuting(filterContext);
+        }
+
+        // GET: File/Upload
+        public ActionResult Upload()
             {
                 return View();
             }
