@@ -1,0 +1,47 @@
+﻿
+
+@{
+    ViewBag.Title = "File Management";
+}
+<h2>Uploaded Files</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>File Type</th>
+            <th>Uploaded By</th>
+            <th>Upload Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model)
+        {
+            <tr>
+                <td>@file.FileName</td>
+                <td>@file.FileType</td>
+                <td>@file.UploadedBy</td>
+                <td>@file.UploadDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    <a href="@Url.Action("Download", new { id = file.FileID })" class="btn btn-primary btn-sm">Download</a>
+                    @if (Session["UserRole"].ToString() == "Admin")
+                    {
+                        <a href="@Url.Action("Edit", new { id = file.FileID })" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="@Url.Action("Delete", new { id = file.FileID })" class="btn btn-danger btn-sm">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

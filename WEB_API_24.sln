@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_Method_Para_With_Crud_IN_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Consume_API(Fetch API)_Client", "3_Consume_API(Fetch API)_Client\3_Consume_API(Fetch API)_Client.csproj", "{E9FD51B1-A00D-496C-9BC6-4C4BB2D65C27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_FileManagementProject", "4_FileManagementProject\4_FileManagementProject.csproj", "{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E9FD51B1-A00D-496C-9BC6-4C4BB2D65C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9FD51B1-A00D-496C-9BC6-4C4BB2D65C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9FD51B1-A00D-496C-9BC6-4C4BB2D65C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

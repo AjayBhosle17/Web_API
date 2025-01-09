@@ -16,7 +16,7 @@ namespace _3_Consume_API_Fetch_API__Client
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "CategoryJs", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Category", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
