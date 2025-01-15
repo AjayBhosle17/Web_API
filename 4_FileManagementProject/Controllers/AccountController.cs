@@ -9,38 +9,38 @@ namespace _4_FileManagementProject.Controllers
 {
     public class AccountController : Controller
     {
-        // GET: Account
-
         FileDbContext db = new FileDbContext();
-        public ActionResult Unauthorized()
-        {
-            return View();
-        }
 
+       
         public ActionResult Login()
         {
             return View();
         }
 
+       
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(string username, string password)
         {
-            var user = db.Users.FirstOrDefault(u => u.UserName == username && u.Password == password);
+            var user = db.Users.FirstOrDefault(u => u.UserName == username && u.Password == password && u.IsActive);
             if (user != null)
             {
                 Session["UserID"] = user.UserID;
-                Session["UserRole"] = user.Role; // e.g., "Admin" or "User"
+                Session["UserName"] = user.UserName;
+                Session["UserRole"] = user.Role;
                 return RedirectToAction("Index", "File");
             }
 
-            TempData["Error"] = "Invalid username or password.";
-            return RedirectToAction("Login");
+            ModelState.AddModelError("", "Invalid username or password.");
+            return View();
         }
 
+        // GET: Account/Logout
         public ActionResult Logout()
         {
             Session.Clear();
             return RedirectToAction("Login");
         }
+
     }
 }

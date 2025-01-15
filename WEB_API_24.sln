@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Consume_API(Fetch API)_Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_FileManagementProject", "4_FileManagementProject\4_FileManagementProject.csproj", "{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{328CD19B-8032-4DAB-83F2-1CAC1FE03640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_Data", "Demo_Data\Demo_Data.csproj", "{B30DD183-96A1-40ED-A5C7-3CC702AD5F6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF86C1C-4AF3-4FA9-AF5E-1FA426217A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328CD19B-8032-4DAB-83F2-1CAC1FE03640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328CD19B-8032-4DAB-83F2-1CAC1FE03640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328CD19B-8032-4DAB-83F2-1CAC1FE03640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328CD19B-8032-4DAB-83F2-1CAC1FE03640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30DD183-96A1-40ED-A5C7-3CC702AD5F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30DD183-96A1-40ED-A5C7-3CC702AD5F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30DD183-96A1-40ED-A5C7-3CC702AD5F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30DD183-96A1-40ED-A5C7-3CC702AD5F6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
